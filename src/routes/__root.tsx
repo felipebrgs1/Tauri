@@ -57,28 +57,23 @@ function RootComponent() {
                 <HeadContent />
             </head>
             <body className='bg-slate-800 text-white p-2'>
-                <div className='p-2 flex gap-2 text-lg'>
+                <div className='p-2 flex gap-4 text-lg'>
                     <Link
                         to='/'
-                        activeProps={{
-                            className: 'font-bold',
-                        }}
-                        activeOptions={{ exact: true }}
+                        className='text-blue-500 font-bold'
                     >
                         Home
                     </Link>
 
                     <Link
                         to='/error'
-                        activeProps={{
-                            className: 'font-bold',
-                        }}
+                        className='text-red-500 font-bold'
                     >
                         Error
                     </Link>
                 </div>
                 <hr />
-                <Outlet /> {/* Start rendering router matches */}
+                <Outlet />
                 <TanStackRouterDevtools position='bottom-right' />
                 <Scripts />
             </body>
